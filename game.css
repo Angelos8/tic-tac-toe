@@ -1,0 +1,64 @@
+
+
+.top-bar{
+    text-align: center;
+    background-color: brown;
+    padding:2rem 2rem;
+    color:#F8F4EA;
+    margin-bottom: 50px;
+}
+
+.details{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#form{
+    display: none;
+}
+
+input[type=text] {
+    border: none;
+    border-bottom: 2px solid brown;
+  }
+
+.flex-container{
+    padding:5% 5%;
+    /* background-image: url('/images/battle.jpeg');
+    background-size: 1500px; */
+    display: flex;
+    justify-content: center;
+}
+
+.player{
+    /* border-color: black;
+    border-style: solid;
+    border-radius: 5px; */
+    width: fit-content;
+    height: fit-content;
+    display: none;
+}
+
+img{
+    
+    width: 300px;
+    height: 540px;
+    background-color: brown;
+}
+
+.container-fluid{
+    padding: 100px 5%;
+}
+
+.col-3{
+    background-color: brown;
+    border: solid 2px;
+    margin: 0.5rem;
+    text-align: center;
+    height: 5rem;
+    width: 5rem;
+    font-size: 50px;
+}
