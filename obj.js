@@ -83,16 +83,49 @@ for(let i=0;i<3; i++){
 }
 console.info(arr)
 
-const WINNING_COMBINATIONS = [
-	[0, 1, 2],
-	[3, 4, 5],
-	[6, 7, 8],
-	[0, 3, 6],
-	[1, 4, 7],
-	[2, 5, 8],
-	[0, 4, 8],
-	[2, 4, 6]
-] // (7x3)
-console.log(WINNING_COMBINATIONS[7][2])
-WINNING_COMBINATIONS[7][2] = 'X'
-console.info(WINNING_COMBINATIONS)
+// const WINNING_COMBINATIONS = [
+// 	[0, 1, 2],
+// 	[3, 4, 5],
+// 	[6, 7, 8],
+// 	[0, 3, 6],
+// 	[1, 4, 7],
+// 	[2, 5, 8],
+// 	[0, 4, 8],
+// 	[2, 4, 6]
+// ] // (8x3)
+// console.log(WINNING_COMBINATIONS[7][2])
+// WINNING_COMBINATIONS[7][2] = 'X'
+// console.info(WINNING_COMBINATIONS)
+
+
+const winningCombos = [
+    ["00", "0-1", "0-2"],
+    ["1-0", "1-1", "1-2"],
+    ["2-0", "2-1", "2-2"],
+    ["0-0", "1-0", "2-0"],
+    ["0-1", "1-1", "2-1"],
+    ["0-2", "1-2", "2-2"],
+    ["0-0", "1-1", "2-2"],
+    ["0-2", "1-1", "2-0"]
+]; // (8x3)
+
+// const winningCombos = [
+//     ["00", "0-1", "0-2"],
+//     ["1-0", "1-1", "1-2"],
+//     ["2-0", "2-1", "2-2"],
+//     ["0-0", "1-0", "2-0"],
+//     ["0-1", "1-1", "2-1"],
+//     ["0-2", "1-2", "2-2"],
+//     ["0-0", "1-1", "2-2"],
+//     ["0-2", "1-1", "2-0"]
+// ]; // (8x3)
+let idCount = 9;
+for (let row=0; row<8; row++){
+    for (let col=0; col<3; col++){
+        if (winningCombos[row][col].search('-')== -1){
+            idCount = idCount + winningCombos[row][col].search('-');
+            console.log(` (${row},${col}) idCount = ${idCount}`);
+        }
+    }
+}
+
